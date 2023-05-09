@@ -29,7 +29,7 @@ def send_verification_email(user_email, verification_token):
     verification_url = f'http://127.0.0.1:8000/verify/{verification_token}'
     subject = 'Email Verification'
     message = f'Please click the link below to verify your email: {verification_url}'
-    sender_email = 'roy.sec@bk.ru'
+    sender_email = ''
     send_mail(subject, message, sender_email, [user_email])
 
 def verify_email(request, verification_token):
